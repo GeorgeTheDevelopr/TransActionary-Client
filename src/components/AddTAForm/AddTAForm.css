@@ -1,0 +1,11 @@
+.addTA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#items {
+  min-height: 98px;
+  min-width: 174px;
+}

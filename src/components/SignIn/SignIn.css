@@ -1,0 +1,17 @@
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-cred {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.body-content {
+  background-color: #34252F;
+  color: #BEC5AD;
+}

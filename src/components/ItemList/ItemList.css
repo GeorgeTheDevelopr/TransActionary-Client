@@ -1,0 +1,80 @@
+@media screen and (max-width: 330px) {
+  #taList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #itemList {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+  }
+  
+  #listedItem {
+    list-style-type: disc;
+  }
+  
+  #addTA-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 331px) {
+  #taList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #itemList {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+  }
+  
+  #listedItem {
+    list-style-type: disc;
+  }
+  
+  #addTA-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #taList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #itemList {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+  }
+  
+  #listedItem {
+    list-style-type: disc;
+  }
+  
+  #addTA-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+}

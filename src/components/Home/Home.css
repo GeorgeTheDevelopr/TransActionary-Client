@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 330px) {
+  #landing-msg {
+    color: white;
+  }
+  
+  .landing-msg-container {
+    background-color: #34252F;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 331px) {
+
+  #landing-msg {
+    color: white;
+  }
+  
+  .landing-msg-container {
+    background-color: #34252F;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 479px) {
+
+  #landing-msg {
+    color: white;
+  }
+  
+  .landing-msg-container {
+    background-color: #34252F;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #landing-msg {
+    color: white;
+  }
+  
+  .landing-msg-container {
+    background-color: #34252F;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

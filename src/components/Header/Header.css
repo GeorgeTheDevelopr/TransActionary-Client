@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 330px) {
+
+.background-img {
+  opacity: 0.5; 
+}
+
+.background-img > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2.5rem;
+}
+
+.header-content {
+  color: #BEC5AD;
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -313px;
+  border-radius: 4.5rem;
+}
+
+.header {
+  color: #CBFF8C;
+}
+
+.header-title {
+  font-family: Questrial;
+  font-size: 2.4rem;
+  align-self: flex-start;
+  margin-bottom: 0;
+  background: black;
+}
+
+.header-subtitle {
+  font-family: Oswald;
+  font-size: 18px;
+  color: #E1FFBD;
+
+}
+
+.image-1 {
+  display: none;
+}
+
+.name-sig {
+  font-family: Homemade Apple;
+}
+}
+
+@media screen and (min-width: 331px) {
+
+.background-img {
+  opacity: 0.5; 
+}
+
+.background-img > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2.5rem;
+}
+
+.header-content {
+  color: #BEC5AD;
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -340px;
+}
+
+
+.header {
+  color: #CBFF8C;
+}
+
+.header-title {
+  font-family: Questrial;
+  font-size: 2.45rem;
+  align-self: flex-start;
+  margin-bottom: 0;
+  background:black;
+}
+
+.header-subtitle {
+  font-family: Oswald;
+  font-size: 18px;
+  color: #E1FFBD;
+}
+
+.image-1 {
+  display: none;
+}
+
+
+.name-sig {
+  font-family: Homemade Apple;
+  margin-top: -2px;
+}
+}
+
+@media screen and (min-width: 479px) {
+
+.background-img {
+  opacity: 0.5; 
+}
+
+.background-img > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2.5rem;
+}
+
+.header-content {
+  color: #BEC5AD;
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -384px;
+}
+
+.header {
+  color: #CBFF8C;
+}
+
+.header-title {
+  font-family: Questrial;
+  font-size: 3.45rem;
+  align-self: flex-start;
+  margin-bottom: 0;
+  background:black;
+}
+
+.header-subtitle {
+  font-family: Oswald;
+  font-size: 1.5rem;
+  color: #E1FFBD;
+}
+
+.name-sig {
+  font-family: Homemade Apple;
+}
+}
+
+@media screen and (min-width: 720px) {
+
+.background-img {
+  opacity: 0.5; 
+}
+
+.background-img > img {
+  max-width: 50%;
+  height: 500px;
+  border-radius: 0;
+}
+
+.header-content {
+  color: #BEC5AD;
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -384px;
+}
+
+.header {
+  color: #CBFF8C;
+}
+
+.header-title {
+  font-family: Questrial;
+  font-size: 3.45rem;
+  align-self: flex-start;
+  margin-bottom: 0;
+  background:black;
+}
+
+.header-subtitle {
+  font-family: Oswald;
+  font-size: 1.5rem;
+  color: #E1FFBD;
+}
+
+.image-1 {
+  display: inline;
+}
+
+
+
+.name-sig {
+  font-family: Homemade Apple;
+}
+}
