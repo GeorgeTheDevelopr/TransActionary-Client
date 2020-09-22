@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import SignIn from './components/SignIn/SignIn';
 import About from './components/About/About';
 import Mainview from './components/Mainview/Mainview';
+import Details from './components/Details/Details';
 import AddTAForm from './components/AddTAForm/AddTAForm';
 import ItemApiService from './services/item-api-service';
 import TokenService from './services/token-service';
@@ -83,6 +84,7 @@ export default class App extends React.Component {
           />
           <Route path='/about' component={About} />
           <Route exact path='/addta' component={AddTAForm} />
+          <Route path='/items/:id' component={Details}/>
         </div>
       </Context.Provider>
     );

@@ -1,12 +1,49 @@
+#addTA-btn {
+  height: 3rem;
+  border-radius: 1rem;
+  border-style: none;
+  width: 8rem;
+  margin-bottom: 3rem;
+  font-family: Josefin Sans;
+  font-weight: bold;
+
+}
+
+#viewList-btn {
+  border-radius: 1rem;
+  border-style: none;
+  width: 8rem;
+  font-family: Josefin Sans;
+  font-weight: bold;
+  height: 1.7rem;
+}
+
 @media screen and (max-width: 330px) {
-  #taList {
+  .item-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #34252F;
   }
   
+  #itemCard {
+    background-color: white;
+    border-radius: 6px;
+    width: 220px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0
+  }
+
+  #update-btn-container {
+    margin-top: 20px;
+  }
+
   #itemList {
     display: flex;
     flex-direction: column;
@@ -14,29 +51,47 @@
     padding: 3rem;
   }
   
-  #listedItem {
-    list-style-type: disc;
-  }
   
   #addTA-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    background-color: #34252F;
+  }
+
+  #ta-list-header {
+    text-align: center;
+    color: #cbff8c;
   }
 }
 
 @media screen and (min-width: 331px) {
-  #taList {
+  .item-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #34252F;
     
   }
   
+  #itemCard {
+    background-color: white;
+    border-radius: 6px;
+    width: 220px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0
+  }
+
+  #update-btn-container {
+    margin-top: 20px;
+  }
+
   #itemList {
     display: flex;
     flex-direction: column;
@@ -44,26 +99,44 @@
     padding: 3rem;
   }
   
-  #listedItem {
-    list-style-type: disc;
-  }
   
   #addTA-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    background-color: #34252F;
+  }
+
+  #ta-list-header {
+    text-align: center;
+    color: #cbff8c;
   }
 }
 
 @media screen and (min-width: 720px) {
-  #taList {
+  .item-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #34252F;
+  }
+
+  #itemCard {
+    background-color: white;
+    border-radius: 6px;
+    width: 220px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0
+  }
+
+  #update-btn-container {
+    margin-top: 20px;
   }
   
   #itemList {
@@ -73,15 +146,16 @@
     padding: 3rem;
   }
   
-  #listedItem {
-    list-style-type: disc;
-  }
   
   #addTA-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    background-color: #34252F;
+  }
+
+  #ta-list-header {
+    text-align: center;
+    color: #cbff8c;
   }
 }

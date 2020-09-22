@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import './Mainview.css';
 import ItemApiService from '../../services/item-api-service';
 import Context from '../../Context';
-import ItemList from '../ItemList/ItemList'
+// import ItemList from '../ItemList/ItemList'
 
 
 export default class Mainview extends React.Component {
@@ -16,15 +16,40 @@ export default class Mainview extends React.Component {
     );
   };
 
+  renderItemList() {
+    return this.context.itemList.map((item) => {
+      const { id, vendor, fullPrice } = item;      
+      const itemList = (
+        <div id='itemCard' key={id}>
+          <h4>{vendor} </h4>
+          <span>Full Price: {fullPrice}</span>
+          <div id='update-btn-container'>
+            <Link to={`/items/${id}`}><input type='button' id="viewList-btn" value='View List'/></Link>
+          </div>
+        </div>
+
+      
+      );
+      return itemList;
+    });
+  }
+
+componentDidMount() {
+  this.renderItemList()
+}
+
 render(){
   return (  
   <div className="App" id="main-view">
     <Header className="App-header" />
     <Navbar />
     <div id='addTA-container'>
-      <Link to="/addta"><input type='button' value="Add Item" id='addTA-btn'/></Link>
+      <Link to="/addta"><input type='button' value="Add Items" id='addTA-btn'/></Link>
     </div>
-    <ItemList className='itemList' />
+    <h2 id='ta-list-header'>Transactions List</h2>
+    <div className='item-list'>
+      {this.renderItemList()}
+    </div>
   </div>
   );
   }

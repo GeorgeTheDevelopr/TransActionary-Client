@@ -36,14 +36,12 @@ export default class AddItemForm extends React.Component {
 
             <label htmlFor="fullPrice">Total Price</label>
             <input type="text" name="fullPrice" id="fullPrice" placeholder="$4.99" required />
+            
+            <div className='form-btn-container'>
+              <input type="submit" placeholder="Submit" value="Submit" id='submit-ta' />
 
-            <input type="submit" placeholder="submit" value="submit" />
-              <input
-                    className="btn"
-                    type="button"
-                    value="Cancel"
-                    onClick={() => this.props.history.goBack()}
-                  />
+              <input className="btn" type="button" value="Cancel" id='cancel-ta' onClick={() => this.props.history.goBack()}/>
+            </div>
           </form>
       </div>
     )

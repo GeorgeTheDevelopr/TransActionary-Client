@@ -11,6 +11,7 @@
     flex-direction: column;
     background-color: white;
     padding: 3rem;
+    margin-top: 6rem;
   }
   
   #listedItem {

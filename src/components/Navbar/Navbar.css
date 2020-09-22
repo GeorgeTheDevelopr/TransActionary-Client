@@ -9,11 +9,11 @@
   background-color: #4E0110;
 }
 
-
 .navBar {
   background-color: #521C27;
   display: flex;
   margin-top: -85px;
+  justify-content: center;
 }
 
 li {
@@ -43,6 +43,7 @@ a:target {
   font-family: Josefin Sans;
   font-size: 1.3rem;
   color: #cbff8c;
+  margin-right: 44px;
 }
 
 .nav-link {
