@@ -1,68 +1,302 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TransActionary: Save your transactions!
 
-## Available Scripts
+## George Brown
 
-In the project directory, you can run:
+[Virtual Desk Live Site](https://virtual-desk.vercel.app/)
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Need
+2. Description
+3. How It Works
+4. Client Documentation/Screenshots
+5. API Documentation
+   - POST Auth Endpoint
+   - GET Item Endpoints
+   - POST Item Endpoints
+   - GET User Endpoints
+6. Technologies
+7. Link to API repo
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TransActionary is an web application that allows you to conviently store lists of items "or transactions", with a vendor name and total price included. Users are then able to view the created list. 
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How It Works
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+As a user, I can:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Sign into account
+- Sign out of account
+- View saved transactions
+- Create new transactions
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Client Documentation/Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Welcome Page** - Landing page; click sign in to get started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Welcome Page](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/Welcome.png?raw=true)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Sign In Page** - Login with given credentials; this will be an email and a password.
 
-## Learn More
+![Login Page](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/SignIn.png?raw=true)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **About Page** - Information about web app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![About Page](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/About.png?raw=true)
 
-### Code Splitting
+4. **Main View Page** - Main view for saved transaction lists; Can also add new list from this view.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![Main View](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/MainView.png?raw=true)
 
-### Analyzing the Bundle Size
+5. **Single Item List View** - View for Item list by ID
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![Single Item View](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/ItemDetails.png?raw=true)
 
-### Making a Progressive Web App
+6. **NewItem Form** - Upload new transaction/items. Vendor name, items *separated by commas* and total price are required.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+![New Item Form](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/AddItem.png?raw=true)
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## API Documentation
 
-### Deployment
+### POST Auth Endpoint
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+#### Submit User Credentials
 
-### `npm run build` fails to minify
+Returns JSON data containing auth token
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **URL**
+
+  `/auth/login`
+
+- **Method**
+
+  `POST`
+
+- **URL Params**
+
+  None
+
+- **Data Params**
+
+  - **Required:** `{email, password}`
+
+- **Success Response**
+
+  - **Code:** 200
+  - **Content:** `{authToken: token}`
+
+- **Error Response**
+
+  - **Code:** 400
+  - **Content:** `{error: "Missing '${key}' in body"}`
+
+    OR
+
+  - **Code:** 400
+  - **Content:** `{error: "Incorrect email or password"}`
+
+    OR
+
+  - **Code:** 401
+  - **Content:** `{error: 'User not found'}`
+
+---
+
+### GET Item Endpoints
+
+#### Retrieve all Items
+
+Returns 200 and JSON data about all items
+
+- **URL**
+
+  `/items`
+
+- **Method**
+
+  GET
+
+- **URL Params**
+
+  None
+
+- **Data Params**
+
+  - **Required:** None
+
+- **Success Response**
+
+  - **Code:** 200
+  - **Content:** `{id, items, price, owner_id, altId, altId2}`
+
+- **Error Response**
+
+  - **Code:** 400
+
+    OR
+
+  - **Code:** 401
+  - **Content:** `{error: 'Unauthorized'}`
+
+<p>&nbsp;</p>
+
+
+#### Retrieve Item by id
+
+Returns 200 and JSON data about selected item
+
+- **URL**
+
+  `/items/:id`
+
+- **Method**
+
+  GET
+
+- **URL Params**
+
+  - **Required:** `id = <integer>`
+
+- **Data Params**
+
+  - **Required:** `{Authorization", Bearer ${bearerToken}}`
+
+- **Success Response**
+
+  - **Code:** 200
+  - **Content:** `{id, itemName, fullPrice, ownerId, altId, altId2}`
+
+- **Error Response**
+
+  - **Code:** 400
+
+    OR
+
+  - **Code:** 401
+  - **Content:** `{error: 'Unauthorized'}`
+
+---
+
+### POST Item Endpoints
+
+#### Add a Item
+
+Returns 201 and JSON data about new item
+
+- **URL**
+
+  `/items`
+
+- **Method**
+
+  POST
+
+- **URL Params**
+
+  None
+
+- **Data Params**
+
+  - **Required:** `{ subject, question, date_due }`
+  - **Required:** `{Authorization", Bearer ${bearerToken}}`
+
+- **Success Response**
+
+  - **Code:** 201
+  - **Content:** `{ id, items, fullPrice, ownerId, altId, altId2 }`
+
+- **Error Response**
+
+  - **Code:** 400
+  - **Content:** `{error: "Missing '${key}' details in body"}`
+
+    OR
+
+  - **Code:** 401
+  - **Content:** `{error: 'Unauthorized'}`
+
+---
+
+### GET User Endpoints
+
+#### Retrieve all Users
+
+Returns 201 and JSON data about all users
+
+- **URL**
+
+  `/users`
+
+- **Method**
+
+  `GET`
+
+- **URL Params**
+
+  - **Required:** None
+
+- **Data Params**
+
+  - **Required:** None
+
+- **Success Response**
+
+  - **Code:** 201
+  - **Content:** `{id, firstName, lastName, email, password}`
+
+- **Error Response**
+
+  - **Code:** 400
+  - **Content:** `{error: 'Missing ${key} in request body'}`
+
+    OR
+
+  - **Code:** 400
+  - **Content:** `{error: 'Email address already in use'}`
+
+#### Retrieve Users by id
+
+Returns 201 and JSON data about a user
+
+- **URL**
+
+  `/users/user`
+
+- **Method**
+
+  `GET`
+
+- **URL Params**
+
+  - **Required:** None
+
+- **Data Params**
+
+  - **Required:** `user = <integer>`
+
+- **Success Response**
+
+  - **Code:** 201
+  - **Content:** `{id, firstName, lastName, email, password}`
+
+- **Error Response**
+  - **Code:** 401
+  - **Content:** `{error: 'Unauthorized'}`
+
+---
+
+## Technologies
+
+TransActionary is built using the PERN stack, which includes PostgreSQL, Express, React and Node.
+
+## Links
+
+[Github API Repo](https://github.com/GeorgeTheDevelopr/TransActionary-Server)
