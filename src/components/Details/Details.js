@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import './Details.css';
@@ -12,9 +12,12 @@ export default class Details extends React.Component {
 
   render(){
     const { itemList = [] } = this.context;
-    const item = itemList.find((i) => i.id === Number(this.props.match.params.id)) || {};
-    const itemsSplitArr = item.items.split(',').map((items) => {
-      return <li key={item.id} id="listedItem">{items}</li>
+    const item = itemList.find((i) => i.id === Number(this.props.match.params.id));
+    if (!item) {
+      return <Redirect to='/' />
+    }
+    const itemsSplitArr = item.items.split(',').map((items, idx) => {
+      return <li key={idx} id="listedItem">{items}</li>
     })
     return (  
     <div className="App" id="main-view">
@@ -23,7 +26,7 @@ export default class Details extends React.Component {
       <div id='single-item'>
         <h4>{item.vendor} </h4>
         <span>Full Price: {item.fullPrice}</span>
-        <ul>
+        <ul >
           {itemsSplitArr}
         </ul>
         <input type="button" value="Go Back" id='back-btn' onClick={() => this.props.history.goBack()}/>

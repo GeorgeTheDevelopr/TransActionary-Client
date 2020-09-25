@@ -27,7 +27,7 @@ export default class AddItemForm extends React.Component {
       <Header />
       <Navbar />
       <form className="addTA" onSubmit={this.handleSubmit}>
-            <legend>Add Transaction</legend>
+            <legend id='addTA-legend'>Add Transaction</legend>
             <label htmlFor="vendorName">Vendor</label>
             <input type="text" name="vendorName" id="vendorName" placeholder="Kroger" required />
 

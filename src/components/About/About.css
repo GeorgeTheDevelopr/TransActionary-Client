@@ -8,3 +8,13 @@
   background-color: #34252F;
   color: #BEC5AD;
 }
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #bee781;
+  font-size: 12px;
+  padding: 100px 30px 30px 30px;
+  background-color: #34252F;
+}

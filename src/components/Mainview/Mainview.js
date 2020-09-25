@@ -5,7 +5,6 @@ import Navbar from '../Navbar/Navbar';
 import './Mainview.css';
 import ItemApiService from '../../services/item-api-service';
 import Context from '../../Context';
-// import ItemList from '../ItemList/ItemList'
 
 
 export default class Mainview extends React.Component {
@@ -17,7 +16,8 @@ export default class Mainview extends React.Component {
   };
 
   renderItemList() {
-    return this.context.itemList.map((item) => {
+    const { itemList } = this.context
+    return itemList.map((item) => {
       const { id, vendor, fullPrice } = item;      
       const itemList = (
         <div id='itemCard' key={id}>
