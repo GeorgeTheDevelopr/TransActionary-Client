@@ -41,27 +41,27 @@ As a user, I can:
 
 1. **Welcome Page** - Landing page; click sign in to get started
 
-![Welcome Page](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/Welcome.png?raw=true)
+![Welcome Page](https://github.com/GeorgeTheDevelopr/TransActionary-Client/blob/master/public/static/screenshots/Welcome.png?raw=true)
 
 2. **Sign In Page** - Login with given credentials; this will be an email and a password.
 
-![Login Page](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/SignIn.png?raw=true)
+![Login Page](https://github.com/GeorgeTheDevelopr/TransActionary-Client/blob/master/public/static/screenshots/SignIn.png?raw=true)
 
 3. **About Page** - Information about web app.
 
-![About Page](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/About.png?raw=true)
+![About Page](https://github.com/GeorgeTheDevelopr/TransActionary-Client/blob/master/public/static/screenshots/About.png?raw=true)
 
 4. **Main View Page** - Main view for saved transaction lists; Can also add new list from this view.
 
-![Main View](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/MainView.png?raw=true)
+![Main View](https://github.com/GeorgeTheDevelopr/TransActionary-Client/blob/master/public/static/screenshots/MainView.png?raw=true)
 
 5. **Single Item List View** - View for Item list by ID
 
-![Single Item View](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/ItemDetails.png?raw=true)
+![Single Item View](https://github.com/GeorgeTheDevelopr/TransActionary-Client/blob/master/public/static/screenshots/ItemDetails.png?raw=true)
 
 6. **NewItem Form** - Upload new transaction/items. Vendor name, items *separated by commas* and total price are required.
 
-![New Item Form](https://github.com/GeorgeTheDevelopr/TransActionary-Server/blob/master/public/static/screenshots/AddItem.png?raw=true)
+![New Item Form](https://github.com/GeorgeTheDevelopr/TransActionary-Client/blob/master/public/static/screenshots/AddItem.png?raw=true)
 
 
 ## API Documentation
