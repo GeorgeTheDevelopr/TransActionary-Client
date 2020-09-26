@@ -16,7 +16,7 @@ export default class Mainview extends React.Component {
   };
 
   renderItemList() {
-    const { itemList } = this.context
+    const { itemList = [] } = this.context
     return itemList.map((item) => {
       const { id, vendor, fullPrice } = item;      
       const itemList = (
@@ -44,7 +44,7 @@ render(){
     <Header className="App-header" />
     <Navbar />
     <div id='addTA-container'>
-      <Link to="/addta"><input type='button' value="Add Items" id='addTA-btn'/></Link>
+      <Link to="/addta"><input type='button' value="Add New Transaction" id='addTA-btn'/></Link>
     </div>
     <h2 id='ta-list-header'>Transactions List</h2>
     <div className='item-list'>
