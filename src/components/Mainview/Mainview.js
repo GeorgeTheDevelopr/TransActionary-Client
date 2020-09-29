@@ -22,35 +22,33 @@ export default class Mainview extends React.Component {
       const itemList = (
         <div id='itemCard' key={id}>
           <h4>{vendor} </h4>
-          <span>Full Price: {fullPrice}</span>
+          <span>Total Price: {fullPrice}</span>
           <div id='update-btn-container'>
             <Link to={`/items/${id}`}><input type='button' id="viewList-btn" value='View List'/></Link>
           </div>
         </div>
-
-      
       );
       return itemList;
     });
   }
 
-componentDidMount() {
-  this.renderItemList()
-}
-
-render(){
-  return (  
-  <div className="App" id="main-view">
-    <Header className="App-header" />
-    <Navbar />
-    <div id='addTA-container'>
-      <Link to="/addta"><input type='button' value="Add New Transaction" id='addTA-btn'/></Link>
-    </div>
-    <h2 id='ta-list-header'>Transactions List</h2>
-    <div className='item-list'>
-      {this.renderItemList()}
-    </div>
-  </div>
-  );
+  componentDidMount() {
+    this.context.getData()
   }
+
+  render(){
+    return (  
+    <div className="App" id="main-view">
+      <Header className="App-header" />
+      <Navbar />
+      <div id='addTA-container'>
+        <Link to="/addta"><input type='button' value="Add New Transaction" id='addTA-btn'/></Link>
+      </div>
+      <h2 id='ta-list-header'>Transactions List</h2>
+      <div className='item-list'>
+        {this.renderItemList()}
+      </div>
+    </div>
+    );
+    }
 }

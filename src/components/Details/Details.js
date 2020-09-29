@@ -3,12 +3,19 @@ import { Redirect } from 'react-router-dom';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import './Details.css';
-// import ItemApiService from '../../services/item-api-service';
 import Context from '../../Context';
+import ItemApiService from '../../services/item-api-service';
 
 
 export default class Details extends React.Component {
   static contextType = Context;
+
+  handleDelete = () => {
+    const { itemList = [] } = this.context;
+    const item = itemList.find((i) => i.id === Number(this.props.match.params.id));
+    ItemApiService.deleteItem(item.id)
+      .then(() => this.props.history.push("/"))
+  }
 
   render(){
     const { itemList = [] } = this.context;
@@ -29,7 +36,10 @@ export default class Details extends React.Component {
         <ul >
           {itemsSplitArr}
         </ul>
-        <input type="button" value="Go Back" id='back-btn' onClick={() => this.props.history.goBack()}/>
+        <div id='control-btns'>
+          <input type="button" value="Go Back" id='back-btn' onClick={() => this.props.history.goBack()}/>
+          <input type="button" value="Delete List" id='delete-btn' onClick={() => this.handleDelete()}/>
+        </div>
       </div>
       
     </div>

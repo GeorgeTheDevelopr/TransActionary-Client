@@ -54,6 +54,18 @@ const ItemApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
+
+  deleteItem(id) {
+    return fetch(`${config.API_ENDPOINT}/items/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${TokenService.getAuthToken()}`
+      }
+    }).then((res) =>
+    !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+  );
+  },
+
   updateItem(itemId) {
     return fetch(`${config.API_ENDPOINT}/items/${itemId}`, {
       method: "PATCH",
