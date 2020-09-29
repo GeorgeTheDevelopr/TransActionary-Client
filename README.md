@@ -2,7 +2,7 @@
 
 ## George Brown
 
-[Virtual Desk Live Site](https://virtual-desk.vercel.app/)
+[TransActionary](https://transactionary-client.vercel.app/)
 
 ## Table of Contents
 
